@@ -1,7 +1,7 @@
 Connecting Android Emulator to a Sensor Simulator
 ===============================================
 
-Sensor simulator is a tool developed by openintents and can be found [here](http://code.google.com/p/openintents/wiki/SensorSimulator)
+Sensor simulator is a tool developed by openintents and can be found [here](http://code.google.com/p/openintents/wiki/SensorSimulator). This repository just provides some examples about how to use the framework.
 
 Description
 -------------
@@ -16,7 +16,7 @@ Contains an example regarding the utilization of sensor simulator framework
 ./SensorSimulatorCode
 ```
 
-Contains source code reading accelerometer measures from a physical Android device
+Contains source code for reading accelerometer measures from a physical Android device
 ```xml
 ./sourceCode
 ```
