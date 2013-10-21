@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <appender class="org.apache.log4j.ConsoleAppender" name="Console">
+        <param name="Threshold" value="debug"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%t] %c (%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+    <appender class="org.apache.log4j.net.SocketHubAppender" name="Socket">
+        <param name="Threshold" value="off"/>
+        <param name="Port" value="4445"/>
+        <param name="LocationInfo" value="true"/>
+    </appender>
+    <appender class="org.apache.log4j.ConsoleAppender" name="ErrorConsole">
+        <param name="Threshold" value="off"/>
+        <param name="Target" value="System.err"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%t] %c (%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+    <appender class="org.apache.log4j.FileAppender" name="File">
+        <param name="Append" value="true"/>
+        <param name="BufferedIO" value="false"/>
+        <param name="File" value="${fujaba.propertydir}/fujaba.log"/>
+        <param name="Threshold" value="off"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%t] %c (%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+    <logger name="de.uni_paderborn.fujaba.app.action">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.app.messages">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.app">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.asg">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.basic">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.codegen.digester.rules">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.codegen.digester">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.codegen">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.coobra.actions">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.coobra.util">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.coobra">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.fsa.actions">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.fsa.listener">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.fsa.swing.border">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.fsa.swing">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.fsa.unparse">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.fsa.update">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.fsa">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.gui.comp">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.gui">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.gxl.actions">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.gxl">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.layout.actions">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.layout.options">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.layout">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.logging">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.mpEdit">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.packagediagrams.actions">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.packagediagrams.gui">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.packagediagrams.unparse">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.packagediagrams">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.parser">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.parseTree">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.preferences.gui">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.preferences">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.sequencer">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.texteditor">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.uml.actions">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.uml.dialogs">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.uml.gui">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.uml.unparse">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.uml.update">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.uml.utility">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.uml">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.usecase.actions">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.usecase.gui">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.usecase.unparse">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.usecase">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.views.actions">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.views.beans">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.views.cf.unparse">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.views.cf">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.views.gui">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.views.unparse">
+        <level value="inherited"/>
+    </logger>
+    <logger name="de.uni_paderborn.fujaba.views">
+        <level value="inherited"/>
+    </logger>
+    <root>
+        <level value="error"/>
+        <appender-ref ref="Console"/>
+        <appender-ref ref="ErrorConsole"/>
+        <appender-ref ref="File"/>
+    </root>
+</log4j:configuration>

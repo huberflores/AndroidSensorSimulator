@@ -1,0 +1,124 @@
+package sAccelerometer.sensor;
+
+import org.openintents.sensorsimulator.hardware.SensorManagerSimulator;
+
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorListener;
+import android.hardware.SensorManager;
+import android.os.Bundle;
+import android.widget.TextView;
+
+
+
+public class SensorSimulatorTest extends Activity {
+
+ SensorManagerSimulator mSensorManager;
+
+ TextView mTextView;
+
+ float mOrientationValue;
+
+
+ @Override
+
+ public void onCreate(Bundle savedInstanceState) {
+
+  super.onCreate(savedInstanceState);
+
+  mTextView = new TextView(this);
+
+  setContentView(mTextView);
+
+    
+
+  mSensorManager =
+
+   SensorManagerSimulator.getSystemService(this,
+
+                                           Context.SENSOR_SERVICE);
+
+    
+
+  mSensorManager.connectSimulator();
+
+  mSensorManager.registerListener(mSensorListener,
+
+                                  Sensor.TYPE_ORIENTATION);
+
+ }
+
+    
+
+ @Override
+
+ public void onStop() {
+
+  if (mSensorManager != null)
+
+   mSensorManager.unregisterListener(mSensorListener);
+
+  super.onStop();
+
+ }
+
+    
+
+ @Override
+
+ public void onResume() {
+
+  super.onResume();
+
+  if (mSensorManager == null)
+
+   mSensorManager = 
+
+    SensorManagerSimulator.getSystemService(this,
+
+                                            Context.SENSOR_SERVICE);
+
+  mSensorManager.registerListener(mSensorListener,
+
+                                  Sensor.TYPE_ORIENTATION);    
+
+ }
+
+ 
+
+ SensorListener mSensorListener = new SensorListener() {
+
+  public void onAccuracyChanged(int sensor, int accuracy) {
+
+  
+
+  }
+
+    
+
+  public void onSensorChanged(int sensor, float[] values) {
+
+   mOrientationValue = values[SensorManager.DATA_X];
+
+   if (sensor == SensorManager.SENSOR_ORIENTATION) {
+
+    runOnUiThread(new Runnable() {
+
+     public void run() {
+
+      mTextView.setText(String.valueOf(mOrientationValue));
+
+     }
+
+    });
+
+   }
+
+  }
+
+ };
+
+}

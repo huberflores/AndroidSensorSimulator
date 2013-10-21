@@ -1,0 +1,9 @@
+!SESSION 2011-04-15 08:50:07.671 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86 -data /home/huber/sourceCode/accelerometer/monitor.shaking
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2011-04-15 08:50:15.320
+!MESSAGE No search provider was registed. Tasks search is not available.

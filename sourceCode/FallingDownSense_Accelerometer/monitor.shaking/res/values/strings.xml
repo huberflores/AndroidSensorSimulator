@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, monitor!</string>
+    <string name="app_name">monitor</string>
+<string name="x"></string>
+<string name="y"></string>
+<string name="z"></string>
+</resources>

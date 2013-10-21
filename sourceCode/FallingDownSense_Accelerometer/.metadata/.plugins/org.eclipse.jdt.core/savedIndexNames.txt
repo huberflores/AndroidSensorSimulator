@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/home/huber/Desktop/TechnicalInformation/Sensor/sourceCode/FallingDownSense_Accelerometer/.metadata/.plugins/org.eclipse.jdt.core
+2015543913.index
+314250733.index
+2005383938.index

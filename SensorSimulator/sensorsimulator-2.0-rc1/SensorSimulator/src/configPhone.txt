@@ -1,0 +1,6 @@
+Medium;accelerometer,magnetic field,orientation,gravity,light
+Minimum;accelerometer,magnetic field,orientation
+Samsung - Nexus S;accelerometer,magnetic field,orientation,linear acceleration,gravity,rotation vector,gyroscope,light,proximity
+HTC - Nexus One;accelerometer,magnetic field,orientation,linear acceleration,gravity,rotation vector,gyroscope,light,proximity
+Acer - A500;rotation vector,linear acceleration,gravity,gyroscope,acceleration,magnetic field,orientation,light
+All;accelerometer,magnetic field,orientation,linear acceleration,gravity,rotation vector,gyroscope,temperature,light,proximity,pressure

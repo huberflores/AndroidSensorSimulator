@@ -1,0 +1,12 @@
+#Tue Sep 25 13:27:21 EEST 2012
+logcat.view.colsize.TID=70
+logcat.view.colsize.Text=744
+logcat.view.colsize.Level=30
+ddms.logcat.automonitor.userprompt=true
+logcat.view.colsize.Application=188
+logcat.view.colsize.PID=70
+logcat.view.colsize.Tag=141
+ddms.logcat.auotmonitor.level=error
+logcat.view.colsize.Time=200
+com.android.ide.eclipse.ddms.adb=/home/huber/android-sdk-linux_x86/tools/adb
+eclipse.preferences.version=1
